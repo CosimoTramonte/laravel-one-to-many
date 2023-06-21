@@ -22,6 +22,11 @@ class Project extends Model
         'number_of_collaborators'
     ];
 
+    //il progetto ha un type
+    public function type(){
+        return $this->belongsTo(Type::class);
+    }
+
     public static function generateSlug($str){
 
         $slug = Str::slug($str, '-');
