@@ -17,3 +17,19 @@ Ognuno di voi immagini quali dati servono per un portfolio e quindi generate la 
 Il seeder è opzionale, l’importante che tutta la CRUD funzioni correttamente con tutte le funzionalità viste
 
 BONUS: in edit e create sostituire la textarea con un CK Editor come visto in classe
+
+continuiamo a lavorare sul codice dei giorni scorsi, ma in una nuova repo e aggiungiamo una nuova entità **Type**. Questa entità rappresenta la tipologia di progetto ed è in relazione **one to many** con i progetti.
+I task da svolgere sono diversi, ma alcuni di essi sono un ripasso di ciò che abbiamo fatto nelle lezioni dei giorni scorsi:
+- creare la migration per la tabella `types`
+- creare il model `Type`
+- creare la migration di modifica per la tabella `projects` per aggiungere la chiave esterna
+- aggiungere ai model Type e Project i metodi per definire la relazione one to many
+- visualizzare nella pagina di dettaglio di un progetto la tipologia associata, se presente
+- permettere all’utente di associare una tipologia nella pagina di creazione e modifica di un progetto
+- gestire il salvataggio dell’associazione progetto-tipologia con opportune regole di validazione
+
+Bonus 1:
+creare il seeder per il model Type e il seeder della tabella ‘projects’ con l’id del type (random) in relazione
+
+Bonus 2:
+aggiungere le operazioni CRUD per il model Type, in modo da gestire le tipologie di progetto direttamente dal pannello di amministrazione.
