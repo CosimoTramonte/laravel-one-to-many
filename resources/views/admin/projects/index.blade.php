@@ -29,7 +29,15 @@
                 <tr>
                     <th scope="row">{{$project->id}}</th>
                     <td>{{$project->name}}</td>
-                    <td><span class="badge text-bg-primary">{{$project->kind?->name}}</span></td>
+                    <td><span class="badge
+                        @if ($project->kind->name == 'Back End')
+                            text-bg-primary
+                        @elseif ($project->kind->name == 'Front End')
+                            text-bg-light
+                        @elseif ($project->kind->name == 'Full Stack')
+                            text-bg-warning
+                        @endif
+                        ">{{$project->kind?->name}}</span></td>
                     <td>{{$project->type}}</td>
                     <td>{{$project->technologies_used}}</td>
                     @php

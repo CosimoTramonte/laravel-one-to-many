@@ -34,6 +34,21 @@
         </div>
 
         <div class="mb-3">
+            <label for="kind_id" class="form-label text-white">Kind of Works</label>
+            <select class="form-select" aria-label="Default select example" name="kind_id">
+                <option value="">Selects a Kind of Works</option>
+                @foreach ($kinds as $kind)
+                    <option
+                    value="{{ $kind->id }}"
+                    @if ($kind->id == old('kind_id'))
+                        selected
+                    @endif
+                    >{{ $kind->name }}</option>
+                @endforeach
+            </select>
+        </div>
+
+        <div class="mb-3">
             <label for="type" class="form-label text-white">Type of Project</label>
             <input
                 type="text"

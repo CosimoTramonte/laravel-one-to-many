@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProjectRequest;
+use App\Models\Kind;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -28,7 +29,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-       return view('admin.projects.create');
+        $kinds = Kind::all();
+        return view('admin.projects.create', compact('kinds'));
     }
 
     /**
@@ -82,7 +84,8 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view('admin.projects.edit', compact('project'));
+        $kinds = Kind::all();
+        return view('admin.projects.edit', compact('project', 'kinds'));
     }
 
     /**

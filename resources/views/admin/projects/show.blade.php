@@ -4,6 +4,15 @@
 <div class="container p-5">
     <h1 class="fs-4 my-4">
         {{$project->name}}
+        <span class="badge
+            @if ($project->kind->name == 'Back End')
+                text-bg-primary
+            @elseif ($project->kind->name == 'Front End')
+                text-bg-light
+            @elseif ($project->kind->name == 'Full Stack')
+                text-bg-warning
+            @endif
+        ">{{$project->kind?->name}}</span>
     </h1>
 
     <div class="w-100">
