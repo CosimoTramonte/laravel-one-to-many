@@ -2,12 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\Type;
+use App\Models\Kind;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 
-class TypeTableSeeder extends Seeder
+class KindTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,16 +17,16 @@ class TypeTableSeeder extends Seeder
     public function run()
     {
         $data = [
+            'Full Stack',
             'Front End',
-            'Back End',
-            'Full Stack'
+            'Back End'
         ];
 
-        foreach ($data as $type) {
-            $new_type = new Type();
-            $new_type->name = $type;
-            $new_type->slug = Str::slug($type, '-');
-            $new_type->save();
+        foreach($data as $kind){
+            $new_kind = new Kind();
+            $new_kind->name = $kind;
+            $new_kind->slug = Str::slug($kind, '-');
+            $new_kind->save();
         }
     }
 }

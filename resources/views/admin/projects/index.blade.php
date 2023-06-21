@@ -17,6 +17,7 @@
           <tr>
             <th scope="col">#ID</th>
             <th scope="col">Name</th>
+            <th scope="col">Kind of Works</th>
             <th scope="col">Type</th>
             <th scope="col">Technologies used</th>
             <th scope="col">Project start date</th>
@@ -28,6 +29,7 @@
                 <tr>
                     <th scope="row">{{$project->id}}</th>
                     <td>{{$project->name}}</td>
+                    <td><span class="badge text-bg-primary">{{$project->kind?->name}}</span></td>
                     <td>{{$project->type}}</td>
                     <td>{{$project->technologies_used}}</td>
                     @php

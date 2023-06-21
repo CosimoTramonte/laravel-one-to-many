@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::table('projects', function (Blueprint $table) {
             //creao la colonna dove andrà la fk
-            $table->unsignedBigInteger('type_id')->nullable()->after('id');
+            $table->unsignedBigInteger('kind_id')->nullable()->after('id');
 
             //assegno la fk
-            $table->foreign('type_id')
+            $table->foreign('kind_id')
                     ->references('id')
-                    ->on('types')
+                    ->on('kinds')
                     //evita l'eliminazione a cascata
                     ->onDelete('set null');
         });
@@ -36,10 +36,10 @@ return new class extends Migration
         Schema::table('projects', function (Blueprint $table) {
             //elimino prima la fk
             //oppure 'projects_typy_id_foreign'
-            $table->dropForeign(['type_id']);
+            $table->dropForeign(['kind_id']);
 
             //elimino la colonna
-            $table->dropColumn('type_id');
+            $table->dropColumn('kind_id');
         });
     }
 };

@@ -23,8 +23,8 @@ class Project extends Model
     ];
 
     //il progetto ha un type
-    public function type(){
-        return $this->belongsTo(Type::class);
+    public function kind(){
+        return $this->belongsTo(Kind::class);
     }
 
     public static function generateSlug($str){
