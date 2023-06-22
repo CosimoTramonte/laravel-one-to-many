@@ -27,7 +27,6 @@ class ProjectRequest extends FormRequest
             'name' => 'required|min:5|max:255',
             'type' => 'required|min:5|max:255',
             'description' => 'required|min:20',
-            'technologies_used' => 'required|min:5',
             "project_start" => "required|date",
             "end_of_project" => "date",
             'number_of_collaborators' => 'required|min:1'
@@ -36,20 +35,18 @@ class ProjectRequest extends FormRequest
 
     public function messages(){
         return[
-            'name.required' => 'Il Nome è un campo obbligatorio',
+            'name.required' => 'Il Nome è un ligatorio',
             "name.min" => "Il Nome deve avere almeno :min caratteri",
             "name.max" => "Il Nome non deve avere più di :max caratteri",
-            'type.required' => 'Il Tipo è un campo obbligatorio',
+            'type.required' => 'Il Tipo è un ligatorio',
             "type.min" => "Il Tipo deve avere almeno :min caratteri",
             "type.max" => "Il Tipo non deve avere più di :max caratteri",
-            'description.required' => 'La Descrizione è un campo obbligatorio',
+            'description.required' => 'La Descrizione è un ligatorio',
             "description.min" => "La Descrizione deve avere almeno :min caratteri",
-            'technologies_used.required' => 'Le Tecnologie Usate è un campo obbligatorio',
-            "technologies_used.min" => "Le Tecnologie Usate deve avere almeno :min caratteri",
-            "project_start.required" => "La data di inizio progetto è un campo obbligatorio",
+            "project_start.required" => "La data di inizio progetto è un ligatorio",
             "project_start.date" => "La data di inizio progetto ha un formato sbagliato: seguire il YYYY-MM-DD",
             "end_of_project.date" => "La data di fine progetto ha un formato sbagliato: seguire il YYYY-MM-DD",
-            'number_of_collaborators.required' => 'Il Numero dei Collaboratori è un campo obbligatorio',
+            'number_of_collaborators.required' => 'Il Numero dei Collaboratori è un ligatorio',
             "number_of_collaborators.min" => "Il Numero dei Collaboratori deve avere almeno :min caratteri",
         ];
     }

@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('type');
             $table->text('description');
-            $table->text('technologies_used');
             $table->date('project_start');
             $table->date('end_of_project')->nullable();
             $table->tinyInteger('number_of_collaborators')->nullable();

@@ -85,18 +85,6 @@
         </div>
 
         <div class="mb-3">
-            <label for="technologies_used" class="form-label text-white">Technologies used in the Project</label>
-            <input
-                type="text"
-                class="form-control @error('technologies_used') is-invalid @enderror"
-                id="technologies_used"
-                name="technologies_used"
-                value="{{ old('technologies_used', $project->technologies_used)}}"
-                placeholder="Technologies used"
-            >
-        </div>
-
-        <div class="mb-3">
             <label for="project_start" class="form-label text-white">Project start date</label>
             <input
                 type="text"

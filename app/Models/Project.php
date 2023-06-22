@@ -18,8 +18,8 @@ class Project extends Model
         'image_original_name',
         'image_path',
         'description',
-        'technologies_used',
         'project_start',
+        'end_of_project',
         'number_of_collaborators'
     ];
 

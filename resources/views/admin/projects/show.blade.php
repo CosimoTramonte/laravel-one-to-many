@@ -25,7 +25,6 @@
 
     <div>
         <h3 class="py-4">Type -> {{$project->type}}</h3>
-        <h4 class="py-2">Technologies used -> {{$project->technologies_used}}</h4>
         <h6 class="d-inline py-4">Description: </h6>
         <div class="text-white">
             <p>{!! $project->description !!}</p>

@@ -39,7 +39,7 @@
                         @endif
                         ">{{$project->kind?->name}}</span></td>
                     <td>{{$project->type}}</td>
-                    <td>{{$project->technologies_used}}</td>
+                    <td></td>
                     @php
                         $dateOfStart = date_create($project->project_start);
                     @endphp
